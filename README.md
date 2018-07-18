@@ -16,6 +16,7 @@ Have fun!
 - [ ] A map of the searched photos
 - [ ] A better and justified image grid (a more sophisticated solution than a simple flex grid)
 - [ ] Some scroll graphical issues on iOS devices
+- [ ] A better way for a photo hover on touch devices
 - [ ] Tests
 - [ ] Fix TODOs in the code
 

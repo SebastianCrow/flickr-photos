@@ -65,7 +65,8 @@ export abstract class PhotosListComponent implements OnInit, FetchPagesComponent
 
 		for (const photo of photos) {
 			const photoModel = Photo.fromData(photo);
-			photoModel.thumbnailUrl = FlickrApiService.getPhotoUrl(photo, PhotoSize.Small);
+			// TODO: Better photo size depending on desktop / mobile
+			photoModel.thumbnailUrl = FlickrApiService.getPhotoUrl(photo, PhotoSize.Medium);
 			photoModel.originalUrl = FlickrApiService.getPhotoUrl(photo, PhotoSize.Large);
 			photoModels.push(photoModel);
 		}
