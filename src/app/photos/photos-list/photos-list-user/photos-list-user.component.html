@@ -1,0 +1,15 @@
+<div class="btn-back clickable"
+      (click)="close()">
+	<img src="../../../../assets/icons/back.svg">
+	<span>Back</span>
+</div>
+
+<h1 class="title"><strong>{{userName}}'s Photos</strong></h1>
+<div class="photos-list">
+	<photo-thumbnail *ngFor="let photo of photos"
+	                 [url]="photo.thumbnailUrl"
+	                 [date]="photo.date"
+	                 [description]="photo.description"
+	                 (photoSelected)="selectPhoto(photo)">
+	</photo-thumbnail>
+</div>

@@ -1,0 +1,14 @@
+@import "../../../../variables";
+
+.btn-back {
+	position: absolute;
+	top: $window-margin;
+	left: 0;
+
+	img {
+		width: $btn-icon-size;
+		height: $btn-icon-size;
+		padding: 0.25 * $btn-icon-size;
+		margin-bottom: 3px;
+	}
+}

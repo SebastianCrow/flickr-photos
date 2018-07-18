@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.thumbnail-area {
+	background-color: rgb(200, 200, 200);
+
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+
+	.photo-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: rgba(0, 0, 0, 0.5);
+
+		opacity: 0;
+		&:hover {
+			opacity: 1;
+		}
+		transition: opacity $transition-duration ease-in-out;
+
+		.photo-info {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			color: white;
+
+			padding: $window-margin;
+
+			.author {
+				display: inline-block;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	img {
+		//width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,11 @@
+<h1 class="title"><strong>{{query}}</strong></h1>
+<div class="photos-list">
+	<photo-thumbnail *ngFor="let photo of photos"
+	                 [url]="photo.thumbnailUrl"
+	                 [authorName]="photo.authorName"
+	                 [date]="photo.date"
+	                 [description]="photo.description"
+	                 (userSelected)="selectUser(photo.authorId, photo.authorName)"
+	                 (photoSelected)="selectPhoto(photo)">
+	</photo-thumbnail>
+</div>

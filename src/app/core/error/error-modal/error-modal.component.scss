@@ -1,0 +1,8 @@
+@import "../../../../variables";
+
+.close {
+	width: $btn-icon-size;
+	height: $btn-icon-size;
+	padding: 0.25 * $btn-icon-size;
+	margin: 0;
+}

@@ -1,0 +1,19 @@
+<div class="thumbnail-area">
+	<img [src]="url">
+
+	<div class="photo-overlay clickable"
+	     (click)="selectPhoto()">
+
+		<div class="photo-info">
+			<div class="author clickable"
+			     (click)="selectUser(); $event.stopPropagation()">
+				{{authorName}}
+			</div>
+			<div class="date">
+				{{date.toLocaleString()}}
+			</div>
+			<!--<div class="description" [innerHTML]="description">-->
+			<!--</div>-->
+		</div>
+	</div>
+</div>

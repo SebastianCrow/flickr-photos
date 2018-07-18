@@ -1,0 +1,32 @@
+@import "../../../../variables";
+
+$search-icon-size: 38px;
+$margin: 5px;
+
+.search-icon {
+	position: absolute;
+	top: $margin;
+	left: 2 * $margin;
+
+	width: $search-icon-size;
+	height: $search-icon-size;
+
+	padding: 2 * $margin;
+}
+
+input {
+	border: none;
+	width: calc(100% - #{4 * $margin});
+
+	margin: $margin 2 * $margin;
+	padding-left: $search-icon-size;
+
+	font-size: 1.1em;
+
+	transition: background-color 2/3 * $transition-duration ease-in-out;
+
+	&:focus {
+		background-color: rgb(245, 245, 245);
+		box-shadow: none;
+	}
+}

@@ -1,0 +1,35 @@
+<div [ngClass]="{'active': photo !== undefined}"
+     class="fixed scroll">
+
+	<img class="btn-close clickable"
+	     src="../../../assets/icons/close.svg"
+	     (click)="close()">
+
+	<img *ngIf="largePhotoUrl"
+	     [src]="largePhotoUrl"
+	     class="photo form-group">
+
+	<!--TODO: Loading indicator should disappear nicer after an image is loaded-->
+	<img src="../../../assets/icons/ripple.svg"
+	     class="photo-loading">
+
+	<div *ngIf="photo" class="photo-info">
+		<div class="form-group">
+			<label>Author</label>
+			<div class="name">
+				<strong>{{authorName}}</strong>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Date uploaded</label>
+			<div class="date">{{date.toLocaleString()}}</div>
+		</div>
+
+		<div *ngIf="description" class="form-group">
+			<label>Description</label>
+			<div class="description" [innerHTML]="description"></div>
+		</div>
+	</div>
+
+</div>

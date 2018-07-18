@@ -1,0 +1,69 @@
+@import "../../../variables";
+@import "../../../general";
+
+$photo-min-size: 100px;
+
+:host {
+	> div {
+		z-index: 3;
+		background-color: white;
+
+		text-align: center;
+
+		transition: transform $transition-duration;
+		&:not(.active) {
+			transform: translate3d(0, 100%, 0);
+		}
+
+		.btn-close {
+			position: fixed;
+			top: $window-margin;
+			right: $window-margin;
+			z-index: 2;
+
+			width: $btn-icon-size;
+			height: $btn-icon-size;
+			padding: 0.25 * $btn-icon-size;
+
+			border-radius: $border-radius;
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.photo {
+			position: relative;
+			z-index: 1;
+
+			min-width: $photo-min-size;
+			min-height: $photo-min-size;
+
+			max-width: 100%;
+		}
+
+		.photo-loading {
+			$margin: 10px;
+
+			@extend .center-horizontal;
+			top: $margin;
+			z-index: 0;
+
+			width: $photo-min-size - 2 * $margin;
+			height: $photo-min-size - 2 * $margin;
+		}
+
+		.photo-info {
+			$padding: 2 * $window-margin;
+			padding: 0 $padding $padding $padding;
+
+			label {
+				font-size: 0.8em;
+				text-transform: uppercase;
+				color: $color-secondary;
+				margin-bottom: 0;
+			}
+
+			div {
+				@extend .text-ellipsis;
+			}
+		}
+	}
+}

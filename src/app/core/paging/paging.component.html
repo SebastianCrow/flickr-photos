@@ -1,0 +1,9 @@
+<div class="element-on-screen-trigger-wrapper scroll {{paddingTopClass}}"
+     [ngClass]="{'fixed': fixed}">
+	<ng-content></ng-content>
+	<div class="footer"
+	     [hidden]="fetchPagesComponent.areAllPagesFetched()"
+	     elementOnScreenTrigger (appeared)="fetchNextPage()">
+		<img src="../../../assets/icons/ripple.svg">
+	</div>
+</div>

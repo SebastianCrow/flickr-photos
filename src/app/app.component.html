@@ -1,0 +1,23 @@
+<navigation-bar (searchParamsChanged)="photosListSearch.onSearchParamsChanged($event)"></navigation-bar>
+
+<paging [fetchPagesComponent]="photosListSearch"
+        [paddingTopClass]="'padding-top-nav-bar'"
+        class="paging-search">
+	<photos-list-search #photosListSearch
+	                    (userSelected)="showUser($event); photosListUser.showUserPhotos($event)"
+	                    (photoSelected)="photoDetails.showPhoto($event)">
+	</photos-list-search>
+</paging>
+
+<paging [fetchPagesComponent]="photosListUser"
+        [paddingTopClass]="'padding-top-back'"
+        [fixed]="true"
+        [ngClass]="{'slide-down': currentUserId === undefined}"
+        class="paging-user">
+	<photos-list-user #photosListUser
+	                  (closed)="closeUser()"
+	                  (photoSelected)="photoDetails.showPhoto($event)">
+	</photos-list-user>
+</paging>
+
+<photo-details #photoDetails></photo-details>

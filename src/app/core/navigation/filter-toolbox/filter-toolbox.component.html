@@ -1,0 +1,14 @@
+<div class="toolbox"
+     [ngClass]="color !== undefined ? 'color-' + color : ''">
+	<!--Color-->
+	<select class="custom-select"
+	        (change)="onColorChange($event.target.value)">
+		<option *ngFor="let color of colors" [attr.value]="color.code">{{color.name}}</option>
+	</select>
+
+	<!--License-->
+	<select class="custom-select"
+	        (change)="onLicenseChange($event.target.value)">
+		<option *ngFor="let license of licenses" [attr.value]="license.id">{{license.name}}</option>
+	</select>
+</div>

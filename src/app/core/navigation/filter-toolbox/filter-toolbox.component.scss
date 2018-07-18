@@ -1,0 +1,49 @@
+@import "../../../../variables";
+
+$border-color: rgb(230, 230, 230);
+
+.toolbox {
+	margin-top: 5px;
+	padding: 0 $window-margin;
+
+	select {
+		width: auto;
+		max-width: calc(50% - #{0.5 * $window-margin});
+
+		margin-bottom: 5px;
+		&:not(:last-child) {
+			margin-right: $window-margin;
+		}
+
+		border-color: $border-color;
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	transition: border-bottom-color 2 * $transition-duration ease-in-out,
+	            border-bottom-width 2 * $transition-duration ease-in-out;
+
+	border-bottom: 1px solid $border-color;
+
+	&.color-0 { border-bottom-color: #ff2000; }
+	&.color-1 { border-bottom-color: #a24615; }
+	&.color-2 { border-bottom-color: #ff7c00; }
+	&.color-3 { border-bottom-color: #ffcf00; }
+	&.color-4 { border-bottom-color: #fffa00; }
+	&.color-5 { border-bottom-color: #90e200; }
+	&.color-6 { border-bottom-color: #00ab00; }
+	&.color-7 { border-bottom-color: #00b2d4; }
+	&.color-8 { border-bottom-color: #0062c6; }
+	&.color-9 { border-bottom-color: #8c20ba; }
+	&.color-a { border-bottom-color: #f52394; }
+	&.color-b { border-bottom-color: #ff9f9c; }
+	&.color-c { border-bottom-color: #ffffff; }
+	&.color-d { border-bottom-color: #7c7c7c; }
+	&.color-e { border-bottom-color: #000000; }
+
+	&[class^='color-'], &[class*=' color-'] {
+		border-bottom-width: 2px;
+	}
+}

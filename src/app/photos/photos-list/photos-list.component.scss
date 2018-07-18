@@ -1,0 +1,25 @@
+@import "../../../variables";
+@import "../../../general";
+
+$photos-margin: 2px;
+
+.title {
+	margin: 20px $window-margin;
+	text-transform: capitalize;
+	@extend .text-ellipsis;
+}
+
+.photos-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	margin-left: $window-margin;
+	margin-right: $window-margin;
+}
+
+photo-thumbnail {
+	display: inline-block;
+	height: 200px;
+	margin: $photos-margin;
+}

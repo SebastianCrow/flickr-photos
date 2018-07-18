@@ -1,0 +1,39 @@
+@import "../../../variables";
+
+$footer-height: 140px;
+
+:host {
+	display: block;
+	height: 100%;
+
+	.element-on-screen-trigger-wrapper {
+		height: 100%;
+		background-color: $background-color;
+
+		// TODO: A nicer way to handle multiple top paddings
+		&.padding-top-nav-bar {
+			padding-top: $navigation-bar-height;
+		}
+		&.padding-top-back {
+			padding-top: $top-controls-height;
+		}
+
+		.footer {
+			height: $footer-height;
+			text-align: center;
+
+			img {
+				margin: 0.1 * $footer-height;
+				height: 0.8 * $footer-height;
+			}
+		}
+
+		transition: transform $transition-duration;
+	}
+
+	&.slide-down {
+		.element-on-screen-trigger-wrapper {
+			transform: translate3d(0, 100%, 0);
+		}
+	}
+}
