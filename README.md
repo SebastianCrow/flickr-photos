@@ -19,6 +19,11 @@ Have fun!
 - [ ] Tests
 - [ ] Fix TODOs in the code
 
+![Desktop Search](https://github.com/SebastianCrow/flickr-photos/blob/master/example/media/Desktop%20-%20Search.png)
+![Desktop User](https://github.com/SebastianCrow/flickr-photos/blob/master/example/media/Desktop%20-%20User.png)
+![Desktop Details](https://github.com/SebastianCrow/flickr-photos/blob/master/example/media/Desktop%20-%20Details.png)
+![Desktop Mobile](https://github.com/SebastianCrow/flickr-photos/blob/master/example/media/Mobile.png)
+
 ---------------------------------------------------------------------------------------------------------
 
 ## Angular CLI
